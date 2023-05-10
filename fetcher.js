@@ -25,8 +25,8 @@ const writeFile = (body) => {
       totalSize += 1;
     }
   }
- 
-  fs.writeFile(`/Users/lindsayward/lighthouse/${args[1]}`, body, err => {
+  const filePath = `/Users/lindsayward/lighthouse/${args[1]}`
+  fs.writeFile(filePath, body, err => {
     if (err) {
       console.log(err);
     }
